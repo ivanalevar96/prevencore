@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f4f6f8;
+  color: #11212f;
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9aa8b4;
+}
+
+/* ---- Smooth transitions on interactive elements ---- */
+a,
+button {
+  transition: background-color 0.22s ease, color 0.22s ease,
+    border-color 0.22s ease, box-shadow 0.24s ease, opacity 0.22s ease,
+    gap 0.2s ease, transform 0.24s ease;
+}
+
+/* ---- Hover utilities (recreate style-hover from the design) ---- */
+.btn-lime:hover {
+  background: #b6da66 !important;
+}
+.btn-navy:hover {
+  background: #13335a !important;
+}
+.btn-ghost-light:hover {
+  border-color: #a4ce4e !important;
+  color: #a4ce4e !important;
+}
+.btn-outline-navy:hover {
+  background: rgba(11, 31, 51, 0.06) !important;
+}
+
+/* Arrow links: gap widens on hover */
+.link-arrow {
+  transition: gap 0.2s ease, color 0.22s ease;
+}
+.link-arrow:hover {
+  gap: 14px !important;
+}
+
+.nav-link:hover {
+  color: #a4ce4e !important;
+}
+.foot-link:hover {
+  color: #a4ce4e !important;
+}
+.social-chip:hover {
+  border-color: #a4ce4e !important;
+  color: #a4ce4e !important;
+}
+.contact-link:hover {
+  color: #a4ce4e !important;
+}
+
+/* Form fields: focus accent */
+.field {
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+.field:focus {
+  border-color: #a4ce4e !important;
+  background: #ffffff !important;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  a,
+  button {
+    transition: none;
+  }
+}

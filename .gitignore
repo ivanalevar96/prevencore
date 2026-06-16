@@ -1,0 +1,41 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Build output
+dist
+dist-ssr
+*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Vercel
+.vercel
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Large design source archive (kept local, not for repo)
+PrevenCore landing page.zip
+
+# Working/source material for the design (content guide + duplicate images)
+PrevenCore landing page/uploads/

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:#F4F6F8;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  img{max-width:100%;display:block;}
+</style>
+<script src="reveal.js"></script>
+</helmet>
+<div style="background:#F4F6F8; font-family:'IBM Plex Sans',sans-serif; color:#11212F;">
+
+  <dc-import name="SiteNav" active="servicios" hint-size="100%,74px"></dc-import>
+
+  <section style="background:#0B1F33; position:relative; overflow:hidden;">
+    <div style="position:absolute; top:0; right:0; width:40%; height:100%; background:linear-gradient(135deg,transparent 0%,transparent 50%,rgba(164,206,78,0.08) 100%);"></div>
+    <div style="position:relative; max-width:1240px; margin:0 auto; padding:72px 24px 76px;" data-hero>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+        <span style="width:30px; height:2px; background:#A4CE4E;"></span>
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.22em; color:#A4CE4E; text-transform:uppercase;">Servicios</span>
+      </div>
+      <h1 style="margin:0; font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(32px,4.6vw,50px); line-height:1.06; letter-spacing:-0.01em; color:#FFFFFF; max-width:780px;">Asesoría, documentación, capacitación y seguimiento</h1>
+      <p style="margin:24px 0 0; font-size:clamp(16px,1.6vw,18px); line-height:1.65; color:#C2D0DC; max-width:680px;">Servicios pensados para que tu empresa cumpla la normativa chilena, ordene su documentación y mantenga una gestión preventiva activa y verificable.</p>
+    </div>
+  </section>
+
+  <!-- SERVICIOS GRID -->
+  <section style="max-width:1240px; margin:0 auto; padding:80px 24px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:18px;">
+      <div style="background:#FFFFFF; border:1px solid #E5EAEF; border-radius:16px; padding:34px 32px;" data-lift data-reveal style-hover="border-color:#A4CE4E;">
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+          <span style="width:46px; height:46px; border-radius:11px; background:#0B1F33; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:15px; font-weight:600; color:#A4CE4E;">01</span>
+          <h3 style="margin:0; font-family:'Archivo',sans-serif; font-weight:700; font-size:21px; color:#11212F;">Asesoría en prevención de riesgos</h3>
+        </div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:#5C6B79;">Visitas a terreno, acompañamiento técnico, informes, seguimiento de medidas correctivas y apoyo frente a fiscalizaciones.</p>
+      </div>
+      <div style="background:#FFFFFF; border:1px solid #E5EAEF; border-radius:16px; padding:34px 32px;" data-lift data-reveal style-hover="border-color:#A4CE4E;">
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+          <span style="width:46px; height:46px; border-radius:11px; background:#0B1F33; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:15px; font-weight:600; color:#A4CE4E;">02</span>
+          <h3 style="margin:0; font-family:'Archivo',sans-serif; font-weight:700; font-size:21px; color:#11212F;">Documentación legal y técnica</h3>
+        </div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:#5C6B79;">RIOHS, MIPER/IPER, procedimientos de trabajo seguro, obligaciones de informar, registros de capacitación y planes de acción.</p>
+      </div>
+      <div style="background:#FFFFFF; border:1px solid #E5EAEF; border-radius:16px; padding:34px 32px;" data-lift data-reveal style-hover="border-color:#A4CE4E;">
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+          <span style="width:46px; height:46px; border-radius:11px; background:#0B1F33; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:15px; font-weight:600; color:#A4CE4E;">03</span>
+          <h3 style="margin:0; font-family:'Archivo',sans-serif; font-weight:700; font-size:21px; color:#11212F;">Implementación DS 44</h3>
+        </div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:#5C6B79;">Diagnóstico inicial, programa preventivo, matriz de identificación de peligros, planificación anual y seguimiento documental.</p>
+      </div>
+      <div style="background:#FFFFFF; border:1px solid #E5EAEF; border-radius:16px; padding:34px 32px;" data-lift data-reveal style-hover="border-color:#A4CE4E;">
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+          <span style="width:46px; height:46px; border-radius:11px; background:#0B1F33; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:15px; font-weight:600; color:#A4CE4E;">04</span>
+          <h3 style="margin:0; font-family:'Archivo',sans-serif; font-weight:700; font-size:21px; color:#11212F;">Capacitaciones SST</h3>
+        </div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:#5C6B79;">Charlas y evaluaciones en uso de extintores, EPP, Ley Karin, TMERT, MMC, PREXOR, emergencias y riesgos por cargo.</p>
+      </div>
+      <div style="background:#FFFFFF; border:1px solid #E5EAEF; border-radius:16px; padding:34px 32px;" data-lift data-reveal style-hover="border-color:#A4CE4E;">
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+          <span style="width:46px; height:46px; border-radius:11px; background:#0B1F33; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:15px; font-weight:600; color:#A4CE4E;">05</span>
+          <h3 style="margin:0; font-family:'Archivo',sans-serif; font-weight:700; font-size:21px; color:#11212F;">Planes de emergencia</h3>
+        </div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:#5C6B79;">Elaboración de planes, planos de evacuación, simulacros, evaluación de respuesta, brigadas y coordinación interna.</p>
+      </div>
+      <div style="background:#FFFFFF; border:1px solid #E5EAEF; border-radius:16px; padding:34px 32px;" data-lift data-reveal style-hover="border-color:#A4CE4E;">
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+          <span style="width:46px; height:46px; border-radius:11px; background:#0B1F33; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:15px; font-weight:600; color:#A4CE4E;">06</span>
+          <h3 style="margin:0; font-family:'Archivo',sans-serif; font-weight:700; font-size:21px; color:#11212F;">Protocolos MINSAL / SUSESO</h3>
+        </div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:#5C6B79;">Apoyo en gestión de protocolos psicosociales, TMERT, PREXOR, MMC, radiación UV y otros riesgos según exposición.</p>
+      </div>
+      <div style="background:#FFFFFF; border:1px solid #E5EAEF; border-radius:16px; padding:34px 32px;" data-lift data-reveal style-hover="border-color:#A4CE4E;">
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+          <span style="width:46px; height:46px; border-radius:11px; background:#0B1F33; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:15px; font-weight:600; color:#A4CE4E;">07</span>
+          <h3 style="margin:0; font-family:'Archivo',sans-serif; font-weight:700; font-size:21px; color:#11212F;">Inspecciones y auditorías</h3>
+        </div>
+        <p style="margin:0; font-size:15px; line-height:1.65; color:#5C6B79;">Listas de chequeo, informes técnicos, identificación de brechas y control de cumplimiento normativo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE BAND -->
+  <section style="background:#FFFFFF; border-top:1px solid #E5EAEF; border-bottom:1px solid #E5EAEF;">
+    <div style="max-width:1240px; margin:0 auto; padding:86px 24px;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:48px 56px; align-items:center;">
+        <div style="position:relative; border-radius:16px; overflow:hidden; min-height:320px;" data-zoom data-reveal>
+          <img src="assets/emergencias.png" alt="Preparación y respuesta ante emergencias" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:18px;">
+            <span style="width:26px; height:2px; background:#A4CE4E;"></span>
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; color:#5C7A33; text-transform:uppercase;">Aplicable en terreno</span>
+          </div>
+          <h2 style="margin:0 0 18px; font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(26px,3.4vw,36px); line-height:1.12; letter-spacing:-0.01em; color:#11212F;">Evidencia útil para auditorías y fiscalizaciones</h2>
+          <p style="margin:0 0 16px; font-size:16px; line-height:1.7; color:#5C6B79;">Cada servicio entrega documentación ordenada, registros y planes de acción con responsables y plazos. Preparamos a tu empresa para responder ante una fiscalización con respaldo técnico.</p>
+          <a href="Contacto.dc.html" style="display:inline-flex; align-items:center; gap:9px; color:#13335A; font-weight:700; font-size:15.5px; text-decoration:none;" style-hover="gap:14px;">Solicita una revisión documental <span style="color:#8AB833;">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:#A4CE4E;">
+    <div style="max-width:1240px; margin:0 auto; padding:64px 24px; display:flex; flex-wrap:wrap; gap:28px; align-items:center; justify-content:space-between;">
+      <div style="max-width:640px;">
+        <h2 style="margin:0; font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(26px,3.4vw,38px); line-height:1.12; letter-spacing:-0.01em; color:#0B1F33;">Cotiza tu plan preventivo</h2>
+        <p style="margin:16px 0 0; font-size:16.5px; line-height:1.6; color:#1E3A1B;">Cuéntanos sobre tu empresa y armamos un servicio ajustado a tu rubro y nivel de cumplimiento actual.</p>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:14px;">
+        <a href="Contacto.dc.html" style="display:flex; align-items:center; padding:0 28px; height:54px; background:#0B1F33; border-radius:9px; color:#FFFFFF; font-weight:700; font-size:16px; text-decoration:none;" style-hover="background:#13335A;">Solicitar asesoría</a>
+        <a href="https://wa.me/56983100293" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:9px; padding:0 26px; height:54px; background:transparent; border:1.5px solid #0B1F33; border-radius:9px; color:#0B1F33; font-weight:700; font-size:16px; text-decoration:none;" style-hover="background:rgba(11,31,51,0.06);">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

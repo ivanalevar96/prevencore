@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:#F4F6F8;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  img{max-width:100%;display:block;}
+</style>
+<script src="reveal.js"></script>
+</helmet>
+<div style="background:#F4F6F8; font-family:'IBM Plex Sans',sans-serif; color:#11212F;">
+
+  <dc-import name="SiteNav" active="nosotros" hint-size="100%,74px"></dc-import>
+
+  <!-- SUB HERO -->
+  <section style="background:#0B1F33; position:relative; overflow:hidden;">
+    <div style="position:absolute; top:0; right:0; width:40%; height:100%; background:linear-gradient(135deg,transparent 0%,transparent 50%,rgba(164,206,78,0.08) 100%);"></div>
+    <div style="position:relative; max-width:1240px; margin:0 auto; padding:72px 24px 76px;" data-hero>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+        <span style="width:30px; height:2px; background:#A4CE4E;"></span>
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.22em; color:#A4CE4E; text-transform:uppercase;">Nosotros</span>
+      </div>
+      <h1 style="margin:0; font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(32px,4.6vw,50px); line-height:1.06; letter-spacing:-0.01em; color:#FFFFFF; max-width:760px;">Seguridad, control, cumplimiento y confianza</h1>
+      <p style="margin:24px 0 0; font-size:clamp(16px,1.6vw,18px); line-height:1.65; color:#C2D0DC; max-width:680px;">Somos una empresa dedicada a entregar soluciones en seguridad y salud laboral, con un enfoque práctico, técnico y orientado al cumplimiento de la normativa chilena.</p>
+    </div>
+  </section>
+
+  <!-- IDENTIDAD -->
+  <section style="max-width:1240px; margin:0 auto; padding:86px 24px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:48px 56px; align-items:center;">
+      <div>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:18px;">
+          <span style="width:26px; height:2px; background:#A4CE4E;"></span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; color:#5C7A33; text-transform:uppercase;">Identidad corporativa</span>
+        </div>
+        <h2 style="margin:0 0 22px; font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(26px,3.4vw,38px); line-height:1.12; letter-spacing:-0.01em; color:#11212F;">Prevención técnica, cercana y medible</h2>
+        <p style="margin:0 0 18px; font-size:16px; line-height:1.7; color:#5C6B79;">PrevenCore es una empresa orientada a entregar asesorías técnicas en prevención de riesgos laborales, apoyando a organizaciones que necesitan ordenar su gestión preventiva, cumplir con la normativa vigente y proteger la seguridad y salud de sus trabajadores.</p>
+        <p style="margin:0; font-size:16px; line-height:1.7; color:#5C6B79;">Nuestra identidad visual proyecta seguridad, control, cumplimiento y confianza. El escudo representa protección; el check, verificación y respaldo técnico; los colores azul oscuro, verde lima y plata transmiten profesionalismo, modernidad y enfoque preventivo.</p>
+      </div>
+      <div style="position:relative; border-radius:16px; overflow:hidden; min-height:340px;" data-zoom data-reveal>
+        <img src="assets/documentacion.png" alt="Documentación técnica y seguimiento de indicadores" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+      </div>
+    </div>
+  </section>
+
+  <!-- MISION VISION PROPOSITO -->
+  <section style="background:#FFFFFF; border-top:1px solid #E5EAEF; border-bottom:1px solid #E5EAEF;">
+    <div style="max-width:1240px; margin:0 auto; padding:86px 24px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+        <span style="width:26px; height:2px; background:#A4CE4E;"></span>
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; color:#5C7A33; text-transform:uppercase;">Propósito</span>
+      </div>
+      <h2 style="margin:0 0 46px; font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(28px,3.6vw,40px); line-height:1.1; letter-spacing:-0.01em; color:#11212F;">Misión, visión y propósito</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px;">
+        <div style="background:#0B1F33; border-radius:16px; padding:34px 30px;" data-reveal>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.18em; color:#A4CE4E; text-transform:uppercase; margin-bottom:18px;">Misión</div>
+          <p style="margin:0; font-size:15.5px; line-height:1.65; color:#D2DCE4;">Entregar asesoría profesional en prevención de riesgos laborales, ayudando a las empresas a identificar peligros, controlar riesgos, cumplir la normativa chilena vigente y fortalecer una cultura preventiva práctica, cercana y medible.</p>
+        </div>
+        <div style="background:#0B1F33; border-radius:16px; padding:34px 30px;" data-reveal>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.18em; color:#A4CE4E; text-transform:uppercase; margin-bottom:18px;">Visión</div>
+          <p style="margin:0; font-size:15.5px; line-height:1.65; color:#D2DCE4;">Ser reconocidos como una consultora confiable y moderna en seguridad y salud en el trabajo, destacando por la calidad técnica, la respuesta oportuna, la documentación ordenada y el acompañamiento permanente a empresas de distintos rubros.</p>
+        </div>
+        <div style="background:#A4CE4E; border-radius:16px; padding:34px 30px;" data-reveal>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.18em; color:#1E3A1B; text-transform:uppercase; margin-bottom:18px;">Propósito</div>
+          <p style="margin:0; font-size:15.5px; line-height:1.65; color:#16321A; font-weight:500;">Proteger vidas, apoyar a las empresas y transformar la prevención en una herramienta real de gestión, cumplimiento y mejora continua.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALORES -->
+  <section style="max-width:1240px; margin:0 auto; padding:86px 24px;">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+      <span style="width:26px; height:2px; background:#A4CE4E;"></span>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.2em; color:#5C7A33; text-transform:uppercase;">Valores corporativos</span>
+    </div>
+    <h2 style="margin:0 0 46px; font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(28px,3.6vw,40px); line-height:1.1; letter-spacing:-0.01em; color:#11212F;">Lo que guía cada asesoría</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px;">
+      <div style="background:#FFFFFF; border:1px solid #E5EAEF; border-radius:14px; padding:28px 26px; border-top:3px solid #A4CE4E;" data-reveal>
+        <h3 style="margin:0 0 10px; font-family:'Archivo',sans-serif; font-weight:700; font-size:19px; color:#13335A;">Responsabilidad</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#5C6B79;">Trabajamos con criterio técnico, compromiso y respeto por la vida y salud de las personas.</p>
+      </div>
+      <div style="background:#FFFFFF; border:1px solid #E5EAEF; border-radius:14px; padding:28px 26px; border-top:3px solid #A4CE4E;" data-reveal>
+        <h3 style="margin:0 0 10px; font-family:'Archivo',sans-serif; font-weight:700; font-size:19px; color:#13335A;">Cumplimiento</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#5C6B79;">Orientamos cada servicio al cumplimiento legal, documental y operacional que requiere la empresa.</p>
+      </div>
+      <div style="background:#FFFFFF; border:1px solid #E5EAEF; border-radius:14px; padding:28px 26px; border-top:3px solid #A4CE4E;" data-reveal>
+        <h3 style="margin:0 0 10px; font-family:'Archivo',sans-serif; font-weight:700; font-size:19px; color:#13335A;">Claridad</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#5C6B79;">Entregamos información comprensible, aplicable y útil para trabajadores, jefaturas y representantes legales.</p>
+      </div>
+      <div style="background:#FFFFFF; border:1px solid #E5EAEF; border-radius:14px; padding:28px 26px; border-top:3px solid #A4CE4E;" data-reveal>
+        <h3 style="margin:0 0 10px; font-family:'Archivo',sans-serif; font-weight:700; font-size:19px; color:#13335A;">Mejora continua</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#5C6B79;">Promovemos planes de acción, seguimiento y control permanente de las condiciones de seguridad.</p>
+      </div>
+      <div style="background:#FFFFFF; border:1px solid #E5EAEF; border-radius:14px; padding:28px 26px; border-top:3px solid #A4CE4E;" data-reveal>
+        <h3 style="margin:0 0 10px; font-family:'Archivo',sans-serif; font-weight:700; font-size:19px; color:#13335A;">Confianza</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#5C6B79;">Mantenemos una relación profesional, transparente y orientada a resultados verificables.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:#08182a;">
+    <div style="max-width:1240px; margin:0 auto; padding:60px 24px; display:flex; flex-wrap:wrap; gap:24px; align-items:center; justify-content:space-between;">
+      <h2 style="margin:0; font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(24px,3vw,32px); line-height:1.15; color:#FFFFFF; max-width:620px;">¿Quieres ordenar la gestión preventiva de tu empresa?</h2>
+      <a href="Contacto.dc.html" style="display:flex; align-items:center; padding:0 28px; height:54px; background:#A4CE4E; border-radius:9px; color:#0B1F33; font-weight:700; font-size:16px; text-decoration:none;" style-hover="background:#B6DA66;">Solicitar asesoría</a>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

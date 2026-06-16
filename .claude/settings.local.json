@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(npm --version)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(where npx *)",
+      "Bash(where npm *)",
+      "Bash(where node *)",
+      "Bash(where python *)",
+      "Bash(where py *)",
+      "Bash(echo \"exit: $?\")",
+      "PowerShell($fso = New-Object -ComObject Scripting.FileSystemObject; \"node:   \" + $fso.GetFile\\(\"C:\\\\Program Files\\\\nodejs\\\\node.exe\"\\).ShortPath; \"npx.cmd:\" + $fso.GetFile\\(\"C:\\\\Program Files\\\\nodejs\\\\npx.cmd\"\\).ShortPath)",
+      "Bash(npm install *)",
+      "Bash(where serve *)",
+      "Bash(cd \"C:\\\\Users\\\\admin\\\\Desktop\\\\PrevenCore\" && mkdir -p public/assets && cp \"PrevenCore landing page/assets/\"*.png public/assets/ && echo \"=== assets copied ===\" && ls public/assets/)",
+      "Bash(npm run *)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:#F4F6F8;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  img{max-width:100%;display:block;}
+</style>
+<script src="reveal.js"></script>
+</helmet>
+<div style="background:#F4F6F8; font-family:'IBM Plex Sans',sans-serif; color:#11212F;">
+
+  <dc-import name="SiteNav" active="rubros" hint-size="100%,74px"></dc-import>
+
+  <section style="background:#0B1F33; position:relative; overflow:hidden;">
+    <div style="position:absolute; top:0; right:0; width:40%; height:100%; background:linear-gradient(135deg,transparent 0%,transparent 50%,rgba(164,206,78,0.08) 100%);"></div>
+    <div style="position:relative; max-width:1240px; margin:0 auto; padding:72px 24px 76px;" data-hero>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+        <span style="width:30px; height:2px; background:#A4CE4E;"></span>
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.22em; color:#A4CE4E; text-transform:uppercase;">Rubros</span>
+      </div>
+      <h1 style="margin:0; font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(32px,4.6vw,50px); line-height:1.06; letter-spacing:-0.01em; color:#FFFFFF; max-width:760px;">Conocemos los riesgos de tu sector</h1>
+      <p style="margin:24px 0 0; font-size:clamp(16px,1.6vw,18px); line-height:1.65; color:#C2D0DC; max-width:680px;">Ajustamos la documentación, las capacitaciones y la asesoría a la realidad operacional de cada rubro, en cualquier región de Chile.</p>
+    </div>
+  </section>
+
+  <!-- RUBROS GRID -->
+  <section style="max-width:1240px; margin:0 auto; padding:80px 24px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:18px;">
+      <div style="background:#FFFFFF; border:1px solid #E5EAEF; border-radius:16px; padding:30px 28px;" data-lift data-reveal style-hover="border-color:#A4CE4E;">
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; color:#8AB833;">01</span>
+        <h3 style="margin:10px 0 10px; font-family:'Archivo',sans-serif; font-weight:700; font-size:19.5px; color:#11212F;">Construcción y obras viales</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#5C6B79;">Trabajos en altura, excavaciones, maquinaria pesada y faenas en vía pública.</p>
+      </div>
+      <div style="background:#FFFFFF; border:1px solid #E5EAEF; border-radius:16px; padding:30px 28px;" data-lift data-reveal style-hover="border-color:#A4CE4E;">
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; color:#8AB833;">02</span>
+        <h3 style="margin:10px 0 10px; font-family:'Archivo',sans-serif; font-weight:700; font-size:19.5px; color:#11212F;">Comercio y retail</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#5C6B79;">Manejo manual de carga, orden y aseo, prevención de caídas y atención de público.</p>
+      </div>
+      <div style="background:#FFFFFF; border:1px solid #E5EAEF; border-radius:16px; padding:30px 28px;" data-lift data-reveal style-hover="border-color:#A4CE4E;">
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; color:#8AB833;">03</span>
+        <h3 style="margin:10px 0 10px; font-family:'Archivo',sans-serif; font-weight:700; font-size:19.5px; color:#11212F;">Gastronomía y alimentación</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#5C6B79;">Riesgos térmicos, cortes, superficies resbaladizas y manipulación de alimentos.</p>
+      </div>
+      <div style="background:#FFFFFF; border:1px solid #E5EAEF; border-radius:16px; padding:30px 28px;" data-lift data-reveal style-hover="border-color:#A4CE4E;">
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; color:#8AB833;">04</span>
+        <h3 style="margin:10px 0 10px; font-family:'Archivo',sans-serif; font-weight:700; font-size:19.5px; color:#11212F;">Bodegas, logística y transporte</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#5C6B79;">Movimiento de cargas, grúas horquilla, tránsito interno y gestión de la fatiga.</p>
+      </div>
+      <div style="background:#FFFFFF; border:1px solid #E5EAEF; border-radius:16px; padding:30px 28px;" data-lift data-reveal style-hover="border-color:#A4CE4E;">
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; color:#8AB833;">05</span>
+        <h3 style="margin:10px 0 10px; font-family:'Archivo',sans-serif; font-weight:700; font-size:19.5px; color:#11212F;">Empresas contratistas</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#5C6B79;">Coordinación con mandantes, documentación de subcontratación y trabajos esporádicos.</p>
+      </div>
+      <div style="background:#FFFFFF; border:1px solid #E5EAEF; border-radius:16px; padding:30px 28px;" data-lift data-reveal style-hover="border-color:#A4CE4E;">
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; color:#8AB833;">06</span>
+        <h3 style="margin:10px 0 10px; font-family:'Archivo',sans-serif; font-weight:700; font-size:19.5px; color:#11212F;">Agrícola, forestal y terreno</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#5C6B79;">Exposición a radiación UV, maquinaria, plaguicidas y faenas en zonas aisladas.</p>
+      </div>
+      <div style="background:#FFFFFF; border:1px solid #E5EAEF; border-radius:16px; padding:30px 28px;" data-lift data-reveal style-hover="border-color:#A4CE4E;">
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; color:#8AB833;">07</span>
+        <h3 style="margin:10px 0 10px; font-family:'Archivo',sans-serif; font-weight:700; font-size:19.5px; color:#11212F;">Oficinas, colegios y centros médicos</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.6; color:#5C6B79;">Riesgos psicosociales, ergonómicos, eléctricos y planes de emergencia.</p>
+      </div>
+      <div style="background:#0B1F33; border-radius:16px; padding:30px 28px; display:flex; flex-direction:column; justify-content:center;">
+        <h3 style="margin:0 0 10px; font-family:'Archivo',sans-serif; font-weight:700; font-size:19.5px; color:#FFFFFF;">¿Tu rubro no aparece?</h3>
+        <p style="margin:0 0 18px; font-size:14.5px; line-height:1.6; color:#9DACBA;">Atendemos empresas de distintos tamaños y actividades. Cuéntanos tu caso.</p>
+        <a href="Contacto.dc.html" style="display:inline-flex; align-items:center; gap:9px; color:#A4CE4E; font-weight:700; font-size:15px; text-decoration:none;" style-hover="gap:14px;">Escríbenos <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:#08182a;">
+    <div style="max-width:1240px; margin:0 auto; padding:60px 24px; display:flex; flex-wrap:wrap; gap:24px; align-items:center; justify-content:space-between;">
+      <h2 style="margin:0; font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(24px,3vw,32px); line-height:1.15; color:#FFFFFF; max-width:620px;">Agenda una visita técnica para tu empresa</h2>
+      <a href="Contacto.dc.html" style="display:flex; align-items:center; padding:0 28px; height:54px; background:#A4CE4E; border-radius:9px; color:#0B1F33; font-weight:700; font-size:16px; text-decoration:none;" style-hover="background:#B6DA66;">Solicitar asesoría</a>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>
