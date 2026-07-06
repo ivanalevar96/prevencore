@@ -94,6 +94,26 @@ button {
   background: #ffffff !important;
 }
 
+/* ---- Swiper: valores corporativos (coverflow) ---- */
+.values-swiper .swiper-button-next,
+.values-swiper .swiper-button-prev {
+  color: #0b1f33;
+  background: #ffffff;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px -10px rgba(11, 31, 51, 0.4);
+}
+.values-swiper .swiper-button-next:after,
+.values-swiper .swiper-button-prev:after {
+  font-size: 15px;
+  font-weight: 700;
+}
+.values-swiper .swiper-button-next:hover,
+.values-swiper .swiper-button-prev:hover {
+  color: #5c7a33;
+}
+
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   a,

@@ -1,3 +1,8 @@
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { EffectCoverflow, Navigation } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/effect-coverflow'
+import 'swiper/css/navigation'
 import { colors, fonts } from '../theme'
 import { Container, Eyebrow, Button } from '../components/ui'
 import { Reveal, Zoom } from '../components/motion'
@@ -131,26 +136,38 @@ export default function Nosotros() {
         <Container style={{ padding: 'clamp(56px,9vw,86px) 0' }}>
           <Eyebrow>Valores corporativos</Eyebrow>
           <h2 style={{ ...sectionH2, margin: '0 0 46px' }}>Lo que guía cada asesoría</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: 18 }}>
-            {VALUES.map((v, i) => (
-              <Reveal
-                key={v.t}
-                delay={Math.min(i, 6) * 0.06}
-                style={{
-                  background: colors.white,
-                  border: `1px solid ${colors.border}`,
-                  borderRadius: 14,
-                  padding: '28px 26px',
-                  borderTop: `3px solid ${colors.lime}`,
-                }}
-              >
-                <h3 style={{ margin: '0 0 10px', fontFamily: fonts.heading, fontWeight: 700, fontSize: 19, color: colors.navyMid }}>
-                  {v.t}
-                </h3>
-                <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.6, color: colors.muted }}>{v.d}</p>
-              </Reveal>
+          <Swiper
+            className="values-swiper"
+            modules={[EffectCoverflow, Navigation]}
+            effect="coverflow"
+            grabCursor
+            centeredSlides
+            navigation
+            slidesPerView="auto"
+            coverflowEffect={{ rotate: 30, stretch: 0, depth: 130, modifier: 1, slideShadows: false }}
+            style={{ padding: '10px 0 54px' }}
+          >
+            {VALUES.map((v) => (
+              <SwiperSlide key={v.t} style={{ width: 280, height: 240 }}>
+                <div
+                  style={{
+                    height: '100%',
+                    background: colors.white,
+                    border: `1px solid ${colors.border}`,
+                    borderRadius: 14,
+                    padding: '28px 26px',
+                    borderTop: `3px solid ${colors.lime}`,
+                    boxShadow: '0 18px 40px -22px rgba(11,31,51,0.35)',
+                  }}
+                >
+                  <h3 style={{ margin: '0 0 10px', fontFamily: fonts.heading, fontWeight: 700, fontSize: 19, color: colors.navyMid }}>
+                    {v.t}
+                  </h3>
+                  <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.6, color: colors.muted }}>{v.d}</p>
+                </div>
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
         </Container>
       </section>
 

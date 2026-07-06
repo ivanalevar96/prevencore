@@ -1,6 +1,6 @@
 import { colors, fonts, layout } from '../theme'
 import { Container, Eyebrow, ArrowLink, Button, PulseDot, WHATSAPP_URL } from '../components/ui'
-import { Reveal, Hero, LiftCard, Zoom } from '../components/motion'
+import { Reveal, Hero, Zoom } from '../components/motion'
 
 const VALUE_POINTS = [
   'Apoyo técnico para empresas que requieren ordenar su gestión preventiva.',
@@ -8,15 +8,6 @@ const VALUE_POINTS = [
   'Capacitaciones prácticas, con registros y evaluaciones de respaldo.',
   'Acompañamiento frente a auditorías, fiscalizaciones y requerimientos de mutualidad.',
   'Informes de terreno con hallazgos, recomendaciones, responsables y plazos.',
-]
-
-const SERVICES = [
-  { n: '01', t: 'Asesoría en prevención', d: 'Visitas a terreno, acompañamiento técnico, informes y seguimiento de medidas correctivas.' },
-  { n: '02', t: 'Documentación legal y técnica', d: 'RIOHS, MIPER/IPER, procedimientos de trabajo seguro, obligaciones de informar y planes de acción.' },
-  { n: '03', t: 'Implementación DS 44', d: 'Diagnóstico inicial, programa preventivo, matriz de peligros y planificación anual.' },
-  { n: '04', t: 'Capacitaciones SST', d: 'Charlas y evaluaciones: EPP, Ley Karin, TMERT, MMC, PREXOR, emergencias y riesgos por cargo.' },
-  { n: '05', t: 'Planes de emergencia', d: 'Planos de evacuación, simulacros, evaluación de respuesta, brigadas y coordinación interna.' },
-  { n: '06', t: 'Inspecciones y auditorías', d: 'Listas de chequeo, informes técnicos, identificación de brechas y control de cumplimiento.' },
 ]
 
 const METHOD = [
@@ -213,67 +204,6 @@ export default function Inicio() {
         </Container>
       </section>
 
-      {/* SERVICIOS PREVIEW */}
-      <section style={{ background: colors.white, borderTop: `1px solid ${colors.border}`, borderBottom: `1px solid ${colors.border}` }}>
-        <Container style={{ padding: 'clamp(56px,9vw,86px) 0' }}>
-          <div
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: 18,
-              alignItems: 'flex-end',
-              justifyContent: 'space-between',
-              marginBottom: 46,
-            }}
-          >
-            <div>
-              <Eyebrow>Servicios</Eyebrow>
-              <h2 style={{ ...h2, color: colors.ink, maxWidth: 620 }}>
-                Soluciones técnicas para cada etapa de la gestión preventiva
-              </h2>
-            </div>
-            <ArrowLink to="/servicios" style={{ whiteSpace: 'nowrap' }}>Ver todos</ArrowLink>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 18 }}>
-            {SERVICES.map((s, i) => (
-              <LiftCard
-                key={s.n}
-                delay={Math.min(i, 6) * 0.06}
-                style={{
-                  background: colors.card,
-                  border: `1px solid ${colors.border}`,
-                  borderRadius: 14,
-                  padding: '28px 26px',
-                }}
-              >
-                <div
-                  style={{
-                    width: 42,
-                    height: 42,
-                    borderRadius: 10,
-                    background: colors.navy,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontFamily: fonts.mono,
-                    fontSize: 14,
-                    fontWeight: 600,
-                    color: colors.lime,
-                    marginBottom: 18,
-                  }}
-                >
-                  {s.n}
-                </div>
-                <h3 style={{ margin: '0 0 9px', fontFamily: fonts.heading, fontWeight: 700, fontSize: 18.5, color: colors.ink }}>
-                  {s.t}
-                </h3>
-                <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.6, color: colors.muted }}>{s.d}</p>
-              </LiftCard>
-            ))}
-          </div>
-        </Container>
-      </section>
-
       {/* METODOLOGÍA */}
       <section style={{ background: colors.navy, position: 'relative', overflow: 'hidden' }}>
         <div
@@ -349,34 +279,6 @@ export default function Inicio() {
               </div>
               <ArrowLink to="/rubros" style={{ marginTop: 28 }}>Ver rubros atendidos</ArrowLink>
             </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* CTA */}
-      <section style={{ background: colors.lime }}>
-        <Container
-          style={{
-            padding: 'clamp(48px,7vw,64px) 0',
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: 28,
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}
-        >
-          <div style={{ maxWidth: 640 }}>
-            <h2 style={{ ...h2, color: colors.navy, fontSize: 'clamp(26px,3.4vw,38px)', lineHeight: 1.12 }}>
-              Solicita una evaluación inicial para tu empresa
-            </h2>
-            <p style={{ margin: '16px 0 0', fontSize: 16.5, lineHeight: 1.6, color: '#1E3A1B' }}>
-              Recibe orientación para ordenar la gestión preventiva, prepararte ante una fiscalización
-              y proteger a tus trabajadores.
-            </p>
-          </div>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14 }}>
-            <Button to="/contacto" variant="navy" style={{ height: 54 }}>Solicitar asesoría</Button>
-            <Button href={WHATSAPP_URL} variant="outlineNavy" style={{ height: 54 }}>WhatsApp</Button>
           </div>
         </Container>
       </section>
