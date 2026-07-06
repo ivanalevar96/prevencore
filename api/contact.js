@@ -1,6 +1,7 @@
 import nodemailer from 'nodemailer'
 
 const CONTACT_TO = process.env.CONTACT_TO || 'contacto@nexopreventivo.cl'
+const SMTP_FROM = process.env.SMTP_FROM || CONTACT_TO
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -36,7 +37,7 @@ export default async function handler(req, res) {
     })
 
     await transporter.sendMail({
-      from: `"Formulario NexoPreventivo" <${SMTP_USER}>`,
+      from: `"Formulario NexoPreventivo" <${SMTP_FROM}>`,
       to: CONTACT_TO,
       replyTo: email?.trim() || undefined,
       subject: `Nueva solicitud de contacto — ${nombre}`,

@@ -78,9 +78,14 @@ El formulario (`/contacto`) envía un `POST` a la función serverless `api/conta
 
 Variables de entorno requeridas en Vercel:
 
-- `SMTP_USER` — cuenta de Google Workspace (ej. `contacto@nexopreventivo.cl`)
+- `SMTP_USER` — cuenta de Google Workspace con la que se autentica (ej.
+  `diego.valenzuela@nexopreventivo.cl`)
 - `SMTP_PASS` — contraseña de aplicación de esa cuenta
 - `SMTP_PORT` (opcional, por defecto `465`)
+- `SMTP_FROM` (opcional) — remitente visible del correo si es distinto de
+  `SMTP_USER`/`CONTACT_TO` (ej. cuando `contacto@nexopreventivo.cl` es un alias de
+  "Enviar correo como" configurado en la cuenta de `SMTP_USER`)
+- `CONTACT_TO` (opcional, por defecto `contacto@nexopreventivo.cl`)
 
 Mientras `SMTP_USER`/`SMTP_PASS` no estén configuradas, el endpoint responde con un
 error controlado (503) y el frontend muestra un mensaje claro sin romper el build ni
