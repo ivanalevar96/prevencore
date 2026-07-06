@@ -1,7 +1,7 @@
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 
 const CONTACT_TO = process.env.CONTACT_TO || 'contacto@nexopreventivo.cl'
-const SMTP_FROM = process.env.SMTP_FROM || CONTACT_TO
+const MAIL_FROM = process.env.MAIL_FROM || `NexoPreventivo <${CONTACT_TO}>`
 const SITE_URL = process.env.SITE_URL || 'https://nexopreventivo.cl'
 const WHATSAPP_URL = 'https://wa.me/56983100293'
 
@@ -117,30 +117,22 @@ export default async function handler(req, res) {
     })
   }
 
-  const { SMTP_USER, SMTP_PASS, SMTP_PORT } = process.env
+  const { RESEND_API_KEY } = process.env
 
-  if (!SMTP_USER || !SMTP_PASS) {
+  if (!RESEND_API_KEY) {
     return res.status(503).json({
       error:
-        'El envío de correos aún no está disponible: la casilla de Google Workspace está en configuración. Por favor contáctanos por WhatsApp mientras tanto.',
+        'El envío de correos aún no está disponible: el servicio de correo está en configuración. Por favor contáctanos por WhatsApp mientras tanto.',
     })
   }
 
-  const port = Number(SMTP_PORT) || 465
-
   try {
-    const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port,
-      secure: port === 465,
-      auth: { user: SMTP_USER, pass: SMTP_PASS },
-    })
-
+    const resend = new Resend(RESEND_API_KEY)
     const fields = { nombre, empresa, email, telefono, rubro, mensaje }
 
     const sends = [
-      transporter.sendMail({
-        from: `"Formulario NexoPreventivo" <${SMTP_FROM}>`,
+      resend.emails.send({
+        from: MAIL_FROM,
         to: CONTACT_TO,
         replyTo: email?.trim() || undefined,
         subject: `Nueva solicitud de contacto — ${nombre}`,
@@ -162,8 +154,8 @@ export default async function handler(req, res) {
 
     if (email?.trim()) {
       sends.push(
-        transporter.sendMail({
-          from: `"NexoPreventivo" <${SMTP_FROM}>`,
+        resend.emails.send({
+          from: MAIL_FROM,
           to: email.trim(),
           replyTo: CONTACT_TO,
           subject: 'Confirmamos tu solicitud — NexoPreventivo',
@@ -173,7 +165,9 @@ export default async function handler(req, res) {
       )
     }
 
-    await Promise.all(sends)
+    const results = await Promise.all(sends)
+    const failed = results.find((r) => r.error)
+    if (failed) throw new Error(failed.error.message)
 
     return res.status(200).json({ ok: true })
   } catch (err) {

@@ -73,8 +73,8 @@ funcione tras un refresh.
 ## Formulario de contacto
 
 El formulario (`/contacto`) envía un `POST` a la función serverless `api/contact.js`
-(Vercel), que envía por SMTP (Nodemailer) dos correos con plantilla HTML de marca
-(encabezado navy + logo):
+(Vercel), que usa la API de [Resend](https://resend.com) para enviar dos correos con
+plantilla HTML de marca (encabezado navy + logo):
 
 1. **Notificación interna** a `contacto@nexopreventivo.cl` con los datos del cliente
    y `Reply-To` apuntando a su correo (para responder su consulta directamente desde
@@ -82,23 +82,26 @@ El formulario (`/contacto`) envía un `POST` a la función serverless `api/conta
 2. **Confirmación automática al cliente** (solo si dejó correo) avisando que se
    recibió su solicitud y que se le responderá en 24 horas o 1 día hábil.
 
+Se usa Resend en vez de enviar directo por SMTP de Google Workspace porque
+`contacto@nexopreventivo.cl` es un alias de la misma casilla que recibe la
+notificación: Gmail trata ese envío como "correo de uno mismo para uno mismo", lo
+archiva fuera de la bandeja de entrada y rompe el `Reply-To`. Con Resend el correo
+llega como cualquier correo externo normal.
+
 Variables de entorno requeridas en Vercel:
 
-- `SMTP_USER` — cuenta de Google Workspace con la que se autentica (ej.
-  `diego.valenzuela@nexopreventivo.cl`)
-- `SMTP_PASS` — contraseña de aplicación de esa cuenta
-- `SMTP_PORT` (opcional, por defecto `465`)
-- `SMTP_FROM` (opcional) — remitente visible del correo si es distinto de
-  `SMTP_USER`/`CONTACT_TO` (ej. cuando `contacto@nexopreventivo.cl` es un alias de
-  "Enviar correo como" configurado en la cuenta de `SMTP_USER`)
+- `RESEND_API_KEY` — API key del proyecto en Resend (dashboard → API Keys)
 - `CONTACT_TO` (opcional, por defecto `contacto@nexopreventivo.cl`)
+- `MAIL_FROM` (opcional, por defecto `NexoPreventivo <contacto@nexopreventivo.cl>`) —
+  remitente visible; requiere que el dominio `nexopreventivo.cl` esté verificado en
+  Resend (registros DNS de SPF/DKIM)
 - `SITE_URL` (opcional, por defecto `https://nexopreventivo.cl`) — dominio público
   usado para cargar el logo en los correos (los clientes de correo no pueden
   resolver rutas relativas del proyecto)
 
-Mientras `SMTP_USER`/`SMTP_PASS` no estén configuradas, el endpoint responde con un
-error controlado (503) y el frontend muestra un mensaje claro sin romper el build ni
-el deploy.
+Mientras `RESEND_API_KEY` no esté configurada, el endpoint responde con un error
+controlado (503) y el frontend muestra un mensaje claro sin romper el build ni el
+deploy.
 
 ## Notas
 
