@@ -309,11 +309,11 @@ export default function Contacto() {
                   <div>
                     <div style={{ fontSize: 12, color: '#7C8B99', marginBottom: 5 }}>Correo</div>
                     <a
-                      href="mailto:dv.prevencion@gmail.com"
+                      href="mailto:contacto@nexopreventivo.cl"
                       className="contact-link"
                       style={{ fontSize: 16, color: '#E4EAF0', textDecoration: 'none', wordBreak: 'break-all' }}
                     >
-                      dv.prevencion@gmail.com
+                      contacto@nexopreventivo.cl
                     </a>
                   </div>
                   <div>

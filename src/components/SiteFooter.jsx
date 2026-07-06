@@ -131,8 +131,8 @@ export default function SiteFooter() {
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="foot-link" style={footLink}>
                 WhatsApp +56 9 8310 0293
               </a>
-              <a href="mailto:dv.prevencion@gmail.com" className="foot-link" style={footLink}>
-                dv.prevencion@gmail.com
+              <a href="mailto:contacto@nexopreventivo.cl" className="foot-link" style={footLink}>
+                contacto@nexopreventivo.cl
               </a>
               <span style={{ color: colors.footMuted }}>Valdivia, Región de Los Ríos</span>
               <span style={{ color: colors.footMuted }}>Lunes a Sábado</span>
