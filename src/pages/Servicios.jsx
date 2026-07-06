@@ -1,7 +1,57 @@
 import { colors, fonts } from '../theme'
 import { Container, Eyebrow, ArrowLink } from '../components/ui'
-import { LiftCard, Zoom } from '../components/motion'
+import { Reveal, Zoom } from '../components/motion'
 import SubHero from '../components/SubHero'
+
+const ICON_PROPS = { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.8, strokeLinecap: 'round', strokeLinejoin: 'round' }
+
+const ICONS = {
+  '01': (
+    <svg {...ICON_PROPS}>
+      <path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z" />
+      <path d="M9 12l2 2 4-4" />
+    </svg>
+  ),
+  '02': (
+    <svg {...ICON_PROPS}>
+      <path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
+      <path d="M14 3v4h4" />
+      <path d="M9 13h6M9 16.5h6M9 9.5h2" />
+    </svg>
+  ),
+  '03': (
+    <svg {...ICON_PROPS}>
+      <rect x="6" y="4" width="12" height="17" rx="1.5" />
+      <path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1" />
+      <path d="M9 13l2 2 4-4" />
+    </svg>
+  ),
+  '04': (
+    <svg {...ICON_PROPS}>
+      <path d="M12 3l10 5-10 5-10-5 10-5z" />
+      <path d="M6 10.5V16c0 1.5 2.5 3 6 3s6-1.5 6-3v-5.5" />
+    </svg>
+  ),
+  '05': (
+    <svg {...ICON_PROPS}>
+      <path d="M12 3l10 18H2L12 3z" />
+      <path d="M12 10v4" />
+      <circle cx="12" cy="17" r="0.6" fill="currentColor" stroke="none" />
+    </svg>
+  ),
+  '06': (
+    <svg {...ICON_PROPS}>
+      <path d="M12 20s-7-4.5-9.5-9C1 7.5 3 4 6.5 4c2 0 3.3 1.2 4 2.2C11.2 5.2 12.5 4 14.5 4 18 4 20 7.5 18.5 11c-2.5 4.5-6.5 9-6.5 9z" />
+      <path d="M5 12h3l1.5 3 2-6 1.5 3H18" />
+    </svg>
+  ),
+  '07': (
+    <svg {...ICON_PROPS}>
+      <circle cx="10.5" cy="10.5" r="6.5" />
+      <path d="M15.5 15.5L21 21" />
+    </svg>
+  ),
+}
 
 const SERVICES = [
   { n: '01', t: 'Asesoría en prevención de riesgos', d: 'Visitas a terreno, acompañamiento técnico, informes, seguimiento de medidas correctivas y apoyo frente a fiscalizaciones.' },
@@ -24,45 +74,18 @@ export default function Servicios() {
       />
 
       {/* GRID */}
-      <section>
+      <section style={{ background: colors.navyDark }}>
         <Container style={{ padding: 'clamp(52px,8vw,80px) 0' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))', gap: 18 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 22 }}>
             {SERVICES.map((s, i) => (
-              <LiftCard
-                key={s.n}
-                delay={Math.min(i, 6) * 0.05}
-                style={{
-                  background: colors.white,
-                  border: `1px solid ${colors.border}`,
-                  borderRadius: 16,
-                  padding: '34px 32px',
-                }}
-              >
-                <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 18 }}>
-                  <span
-                    style={{
-                      width: 46,
-                      height: 46,
-                      borderRadius: 11,
-                      background: colors.navy,
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      fontFamily: fonts.mono,
-                      fontSize: 15,
-                      fontWeight: 600,
-                      color: colors.lime,
-                      flexShrink: 0,
-                    }}
-                  >
-                    {s.n}
-                  </span>
-                  <h3 style={{ margin: 0, fontFamily: fonts.heading, fontWeight: 700, fontSize: 21, color: colors.ink }}>
-                    {s.t}
-                  </h3>
+              <Reveal key={s.n} delay={Math.min(i, 6) * 0.06} style={{ height: '100%' }}>
+                <div className="service-card">
+                  <span className="service-card__num">{s.n}</span>
+                  <div className="service-card__badge">{ICONS[s.n]}</div>
+                  <h3 className="service-card__title">{s.t}</h3>
+                  <p className="service-card__desc">{s.d}</p>
                 </div>
-                <p style={{ margin: 0, fontSize: 15, lineHeight: 1.65, color: colors.muted }}>{s.d}</p>
-              </LiftCard>
+              </Reveal>
             ))}
           </div>
         </Container>

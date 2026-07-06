@@ -114,6 +114,136 @@ button {
   color: #5c7a33;
 }
 
+/* ---- Servicios: futuristic service cards ---- */
+.service-card {
+  position: relative;
+  height: 100%;
+  padding: 36px 30px 32px;
+  border-radius: 4px 20px 20px 20px;
+  background: linear-gradient(150deg, #0e2740 0%, #08182a 100%);
+  border: 1px solid rgba(164, 206, 78, 0.18);
+  clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 0 100%);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, transparent 49%, rgba(164, 206, 78, 0.6) 50%, transparent 51%);
+}
+.service-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    115deg,
+    rgba(164, 206, 78, 0.05) 0px,
+    rgba(164, 206, 78, 0.05) 1px,
+    transparent 1px,
+    transparent 34px
+  );
+  pointer-events: none;
+}
+.service-card__num {
+  position: absolute;
+  top: 2px;
+  right: 22px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 56px;
+  font-weight: 700;
+  color: rgba(164, 206, 78, 0.08);
+  line-height: 1;
+  user-select: none;
+}
+.service-card__badge {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 22px;
+  color: #0b1f33;
+  background: linear-gradient(135deg, #b6da66 0%, #a4ce4e 100%);
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+  box-shadow: 0 0 0 1px rgba(164, 206, 78, 0.3), 0 10px 24px -8px rgba(164, 206, 78, 0.55);
+  transition: box-shadow 0.35s ease;
+}
+.service-card__badge svg {
+  width: 26px;
+  height: 26px;
+}
+.service-card__title {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 10px;
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  color: #ffffff;
+}
+.service-card__desc {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #9dacba;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(164, 206, 78, 0.55);
+  box-shadow: 0 26px 50px -20px rgba(164, 206, 78, 0.35), 0 0 0 1px rgba(164, 206, 78, 0.2) inset;
+}
+.service-card:hover .service-card__badge {
+  box-shadow: 0 0 0 1px rgba(164, 206, 78, 0.55), 0 0 30px rgba(164, 206, 78, 0.65);
+}
+
+/* ---- Rubros: icon banner per card ---- */
+.rubro-card__banner {
+  position: relative;
+  height: 108px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(150deg, #0e2740 0%, #08182a 100%);
+  overflow: hidden;
+}
+.rubro-card__banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    115deg,
+    rgba(164, 206, 78, 0.06) 0px,
+    rgba(164, 206, 78, 0.06) 1px,
+    transparent 1px,
+    transparent 22px
+  );
+}
+.rubro-card__icon {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  color: #0b1f33;
+  background: linear-gradient(135deg, #b6da66 0%, #a4ce4e 100%);
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+  box-shadow: 0 0 0 1px rgba(164, 206, 78, 0.3), 0 10px 22px -8px rgba(164, 206, 78, 0.5);
+}
+.rubro-card__icon svg {
+  width: 25px;
+  height: 25px;
+}
+
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   a,

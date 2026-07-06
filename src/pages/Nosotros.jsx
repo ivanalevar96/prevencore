@@ -142,6 +142,7 @@ export default function Nosotros() {
             effect="coverflow"
             grabCursor
             centeredSlides
+            initialSlide={2}
             navigation
             slidesPerView="auto"
             coverflowEffect={{ rotate: 30, stretch: 0, depth: 130, modifier: 1, slideShadows: false }}
