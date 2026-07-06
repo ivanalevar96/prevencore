@@ -75,7 +75,7 @@ export default function Servicios() {
 
       {/* GRID */}
       <section style={{ background: colors.navyDark }}>
-        <Container style={{ padding: 'clamp(52px,8vw,80px) 0' }}>
+        <Container style={{ paddingBlock: 'clamp(52px,8vw,80px)' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 22 }}>
             {SERVICES.map((s, i) => (
               <Reveal key={s.n} delay={Math.min(i, 6) * 0.06} style={{ height: '100%' }}>
@@ -93,7 +93,7 @@ export default function Servicios() {
 
       {/* IMAGE BAND */}
       <section style={{ background: colors.white, borderTop: `1px solid ${colors.border}`, borderBottom: `1px solid ${colors.border}` }}>
-        <Container style={{ padding: 'clamp(56px,9vw,86px) 0' }}>
+        <Container style={{ paddingBlock: 'clamp(56px,9vw,86px)' }}>
           <div
             style={{
               display: 'grid',

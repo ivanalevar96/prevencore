@@ -94,7 +94,7 @@ export default function Contacto() {
       />
 
       <section>
-        <Container style={{ padding: 'clamp(48px,8vw,74px) 0' }}>
+        <Container style={{ paddingBlock: 'clamp(48px,8vw,74px)' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))', gap: 40 }}>
             {/* FORM */}
             <div

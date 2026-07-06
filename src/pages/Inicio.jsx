@@ -60,7 +60,7 @@ export default function Inicio() {
               'linear-gradient(95deg,#0B1F33 0%,#0B1F33 34%,rgba(11,31,51,0.86) 48%,rgba(11,31,51,0.15) 70%,rgba(11,31,51,0) 100%)',
           }}
         />
-        <Container style={{ position: 'relative', padding: 'clamp(56px,8vw,84px) 0 clamp(64px,9vw,92px)' }}>
+        <Container style={{ position: 'relative', paddingBlock: 'clamp(56px,8vw,84px) clamp(64px,9vw,92px)' }}>
           <Hero style={{ maxWidth: 580 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 24 }}>
               <span style={{ width: 30, height: 2, background: colors.lime }} />
@@ -117,7 +117,7 @@ export default function Inicio() {
       <section style={{ background: colors.navyDark, borderTop: '1px solid rgba(164,206,78,0.16)' }}>
         <Container
           style={{
-            padding: '22px 0',
+            paddingBlock: '22px',
             display: 'flex',
             flexWrap: 'wrap',
             alignItems: 'center',
@@ -158,7 +158,7 @@ export default function Inicio() {
 
       {/* PROPUESTA DE VALOR */}
       <section>
-        <Container style={{ padding: 'clamp(56px,9vw,86px) 0' }}>
+        <Container style={{ paddingBlock: 'clamp(56px,9vw,86px)' }}>
           <div
             style={{
               display: 'grid',
@@ -216,7 +216,7 @@ export default function Inicio() {
             background: 'linear-gradient(135deg,transparent 0%,transparent 55%,rgba(164,206,78,0.07) 100%)',
           }}
         />
-        <Container style={{ position: 'relative', padding: 'clamp(56px,9vw,86px) 0' }}>
+        <Container style={{ position: 'relative', paddingBlock: 'clamp(56px,9vw,86px)' }}>
           <Eyebrow color={colors.lime}>Metodología</Eyebrow>
           <h2 style={{ ...h2, color: colors.white, maxWidth: 560, margin: '0 0 50px' }}>
             Cómo trabajamos contigo
@@ -241,7 +241,7 @@ export default function Inicio() {
 
       {/* RUBROS PREVIEW */}
       <section>
-        <Container style={{ padding: 'clamp(56px,9vw,86px) 0' }}>
+        <Container style={{ paddingBlock: 'clamp(56px,9vw,86px)' }}>
           <div
             style={{
               display: 'grid',

@@ -2,6 +2,7 @@ import { colors, fonts } from '../theme'
 import { Container } from '../components/ui'
 import { Reveal } from '../components/motion'
 import SubHero from '../components/SubHero'
+import { useIsTablet } from '../hooks/useMediaQuery'
 
 const NORMS = [
   { tag: 'Ley 16.744', d: 'Seguro social contra riesgos de accidentes del trabajo y enfermedades profesionales.' },
@@ -13,6 +14,7 @@ const NORMS = [
 ]
 
 export default function Normativa() {
+  const isTablet = useIsTablet()
   return (
     <>
       <SubHero
@@ -25,7 +27,7 @@ export default function Normativa() {
 
       {/* LIST */}
       <section>
-        <Container maxWidth="1040px" style={{ padding: 'clamp(52px,8vw,80px) 0 40px' }}>
+        <Container maxWidth="1040px" style={{ paddingBlock: 'clamp(52px,8vw,80px) 40px' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
             {NORMS.map((n, i) => (
               <Reveal
@@ -37,9 +39,9 @@ export default function Normativa() {
                   borderRadius: 14,
                   padding: '26px 28px',
                   display: 'grid',
-                  gridTemplateColumns: '160px 1fr',
-                  gap: 20,
-                  alignItems: 'center',
+                  gridTemplateColumns: isTablet ? '1fr' : '160px 1fr',
+                  gap: isTablet ? 14 : 20,
+                  alignItems: isTablet ? 'start' : 'center',
                 }}
               >
                 <span
@@ -47,7 +49,8 @@ export default function Normativa() {
                     display: 'inline-flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    padding: n.small ? '10px 14px' : '10px 0',
+                    width: isTablet ? 'fit-content' : 'auto',
+                    padding: n.small ? '10px 14px' : isTablet ? '10px 18px' : '10px 0',
                     background: colors.navy,
                     borderRadius: 9,
                     fontFamily: fonts.heading,
@@ -70,7 +73,7 @@ export default function Normativa() {
 
       {/* DISCLAIMER */}
       <section>
-        <Container maxWidth="1040px" style={{ padding: '0 0 clamp(56px,9vw,86px)' }}>
+        <Container maxWidth="1040px" style={{ paddingBlock: '0 clamp(56px,9vw,86px)' }}>
           <div
             style={{
               background: '#EEF4E2',

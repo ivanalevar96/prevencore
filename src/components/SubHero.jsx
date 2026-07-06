@@ -17,7 +17,7 @@ export default function SubHero({ eyebrow, title, subtitle, titleMax = 760, subt
             'linear-gradient(135deg,transparent 0%,transparent 50%,rgba(164,206,78,0.08) 100%)',
         }}
       />
-      <Container style={{ position: 'relative', padding: 'clamp(52px,7vw,72px) 0 clamp(56px,8vw,76px)' }}>
+      <Container style={{ position: 'relative', paddingBlock: 'clamp(52px,7vw,72px) clamp(56px,8vw,76px)' }}>
         <Hero>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20 }}>
             <span style={{ width: 30, height: 2, background: colors.lime }} />

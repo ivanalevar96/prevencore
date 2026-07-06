@@ -74,7 +74,7 @@ export default function Rubros() {
 
       {/* GRID */}
       <section>
-        <Container style={{ padding: 'clamp(52px,8vw,80px) 0' }}>
+        <Container style={{ paddingBlock: 'clamp(52px,8vw,80px)' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 18 }}>
             {RUBROS.map((r, i) => (
               <LiftCard

@@ -62,7 +62,7 @@ export default function Nosotros() {
 
       {/* IDENTIDAD */}
       <section>
-        <Container style={{ padding: 'clamp(56px,9vw,86px) 0' }}>
+        <Container style={{ paddingBlock: 'clamp(56px,9vw,86px)' }}>
           <div
             style={{
               display: 'grid',
@@ -100,7 +100,7 @@ export default function Nosotros() {
 
       {/* MISION VISION PROPOSITO */}
       <section style={{ background: colors.white, borderTop: `1px solid ${colors.border}`, borderBottom: `1px solid ${colors.border}` }}>
-        <Container style={{ padding: 'clamp(56px,9vw,86px) 0' }}>
+        <Container style={{ paddingBlock: 'clamp(56px,9vw,86px)' }}>
           <Eyebrow>Propósito</Eyebrow>
           <h2 style={{ ...sectionH2, margin: '0 0 46px' }}>Misión, visión y propósito</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 18 }}>
@@ -133,7 +133,7 @@ export default function Nosotros() {
 
       {/* VALORES */}
       <section>
-        <Container style={{ padding: 'clamp(56px,9vw,86px) 0' }}>
+        <Container style={{ paddingBlock: 'clamp(56px,9vw,86px)' }}>
           <Eyebrow>Valores corporativos</Eyebrow>
           <h2 style={{ ...sectionH2, margin: '0 0 46px' }}>Lo que guía cada asesoría</h2>
           <Swiper
