@@ -72,7 +72,7 @@ export default function Nosotros() {
                 Prevención técnica, cercana y medible
               </h2>
               <p style={{ margin: '0 0 18px', fontSize: 16, lineHeight: 1.7, color: colors.muted }}>
-                PrevenCore es una empresa orientada a entregar asesorías técnicas en prevención de
+                NexoPreventivo es una empresa orientada a entregar asesorías técnicas en prevención de
                 riesgos laborales, apoyando a organizaciones que necesitan ordenar su gestión
                 preventiva, cumplir con la normativa vigente y proteger la seguridad y salud de sus
                 trabajadores.

@@ -1,4 +1,4 @@
-// Design tokens extracted from the PrevenCore design system
+// Design tokens extracted from the NexoPreventivo design system
 export const colors = {
   ink: '#11212F',
   navy: '#0B1F33',

@@ -43,26 +43,45 @@ export default function Contacto() {
   const [form, setForm] = useState(EMPTY)
   const [sent, setSent] = useState(false)
   const [error, setError] = useState('')
+  const [sending, setSending] = useState(false)
 
   const set = (field) => (e) => {
     setForm((f) => ({ ...f, [field]: e.target.value }))
     setError('')
   }
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault()
     if (!form.nombre.trim() || (!form.email.trim() && !form.telefono.trim()) || !form.mensaje.trim()) {
       setError('Completa tu nombre, un medio de contacto (correo o teléfono) y tu mensaje.')
       return
     }
-    setSent(true)
+
+    setSending(true)
     setError('')
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      const data = await res.json().catch(() => ({}))
+      if (!res.ok) {
+        throw new Error(data.error || 'No pudimos enviar tu solicitud. Intenta de nuevo.')
+      }
+      setSent(true)
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setSending(false)
+    }
   }
 
   const reset = () => {
     setForm(EMPTY)
     setSent(false)
     setError('')
+    setSending(false)
   }
 
   return (
@@ -162,6 +181,7 @@ export default function Contacto() {
                     <button
                       type="submit"
                       className="btn-lime"
+                      disabled={sending}
                       style={{
                         marginTop: 24,
                         width: '100%',
@@ -172,10 +192,11 @@ export default function Contacto() {
                         color: colors.navy,
                         fontWeight: 700,
                         fontSize: 16,
-                        cursor: 'pointer',
+                        cursor: sending ? 'not-allowed' : 'pointer',
+                        opacity: sending ? 0.7 : 1,
                       }}
                     >
-                      Enviar solicitud
+                      {sending ? 'Enviando…' : 'Enviar solicitud'}
                     </button>
                     <p style={{ margin: '16px 0 0', fontSize: 12.5, lineHeight: 1.5, color: '#8693A0' }}>
                       * Indica al menos tu nombre, un medio de contacto y tu mensaje. Protegemos tus
@@ -308,8 +329,8 @@ export default function Contacto() {
                 <div style={{ fontSize: 12, color: '#7C8B99', marginBottom: 13 }}>Síguenos</div>
                 <div style={{ display: 'flex', gap: 10 }}>
                   {[
-                    { label: 'Instagram', href: 'https://instagram.com/prevencore' },
-                    { label: 'Facebook', href: 'https://facebook.com/prevencore' },
+                    { label: 'Instagram', href: 'https://instagram.com/nexopreventivo' },
+                    { label: 'Facebook', href: 'https://facebook.com/nexopreventivo' },
                   ].map((s) => (
                     <a
                       key={s.label}

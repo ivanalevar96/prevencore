@@ -73,7 +73,7 @@ export default function SiteFooter() {
               >
                 <img
                   src={shield}
-                  alt="PrevenCore"
+                  alt="NexoPreventivo"
                   style={{
                     position: 'absolute',
                     top: '50%',
@@ -94,7 +94,7 @@ export default function SiteFooter() {
                   color: colors.white,
                 }}
               >
-                PREVEN<span style={{ color: colors.lime }}>CORE</span>
+                NEXO<span style={{ color: colors.lime }}>PREVENTIVO</span>
               </span>
             </div>
             <p style={{ margin: '18px 0 0', fontSize: 14.5, lineHeight: 1.65, color: colors.footMuted }}>
@@ -139,8 +139,8 @@ export default function SiteFooter() {
             </div>
             <div style={{ display: 'flex', gap: 10, marginTop: 18 }}>
               {[
-                { label: 'Instagram', href: 'https://instagram.com/prevencore' },
-                { label: 'Facebook', href: 'https://facebook.com/prevencore' },
+                { label: 'Instagram', href: 'https://instagram.com/nexopreventivo' },
+                { label: 'Facebook', href: 'https://facebook.com/nexopreventivo' },
               ].map((s) => (
                 <a
                   key={s.label}
@@ -182,7 +182,7 @@ export default function SiteFooter() {
           }}
         >
           <span style={{ fontSize: 13, color: '#6F7E8C' }}>
-            © 2026 PrevenCore · Valdivia, Los Ríos, Chile
+            © 2026 NexoPreventivo · Valdivia, Los Ríos, Chile
           </span>
           <span
             style={{

@@ -1,6 +1,6 @@
-# PrevenCore — Landing page
+# NexoPreventivo — Landing page
 
-Sitio corporativo de **PrevenCore**, asesoría profesional en prevención de riesgos
+Sitio corporativo de **NexoPreventivo**, asesoría profesional en prevención de riesgos
 laborales en Chile. Construido con **React + Vite**, con diseño responsivo dinámico y
 transiciones animadas (Framer Motion). Listo para desplegar en **Vercel**.
 
@@ -70,10 +70,23 @@ funcione tras un refresh.
 2. En Vercel: **New Project → Import** el repo.
 3. Vercel detecta Vite automáticamente (build `vite build`, salida `dist`). Deploy.
 
+## Formulario de contacto
+
+El formulario (`/contacto`) envía un `POST` a la función serverless `api/contact.js`
+(Vercel), que reenvía el mensaje por correo vía SMTP (Nodemailer) a
+`contacto@nexopreventivo.cl`.
+
+Variables de entorno requeridas en Vercel:
+
+- `SMTP_USER` — cuenta de Google Workspace (ej. `contacto@nexopreventivo.cl`)
+- `SMTP_PASS` — contraseña de aplicación de esa cuenta
+- `SMTP_PORT` (opcional, por defecto `465`)
+
+Mientras `SMTP_USER`/`SMTP_PASS` no estén configuradas, el endpoint responde con un
+error controlado (503) y el frontend muestra un mensaje claro sin romper el build ni
+el deploy.
+
 ## Notas
 
 - Los archivos de diseño originales están en `PrevenCore landing page/` (formato
   `.dc.html`) y se conservan solo como referencia; no forman parte del build.
-- El formulario de contacto valida en el cliente y muestra un estado de éxito. Para
-  recibir los envíos, conéctalo a un servicio de correo/formularios (p. ej. Formspree,
-  Resend o una función serverless de Vercel).

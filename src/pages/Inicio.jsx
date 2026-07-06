@@ -182,7 +182,7 @@ export default function Inicio() {
                 Prevención convertida en un sistema ordenado y aplicable
               </h2>
               <p style={{ margin: '22px 0 0', fontSize: 16.5, lineHeight: 1.68, color: colors.muted }}>
-                PrevenCore combina asesoría técnica, elaboración documental, capacitaciones, visitas,
+                NexoPreventivo combina asesoría técnica, elaboración documental, capacitaciones, visitas,
                 informes y seguimiento de medidas correctivas. Un servicio práctico, documentado y
                 aplicable en terreno.
               </p>

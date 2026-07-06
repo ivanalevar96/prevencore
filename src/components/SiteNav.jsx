@@ -40,7 +40,7 @@ function Logo() {
       >
         <img
           src={shield}
-          alt="PrevenCore"
+          alt="NexoPreventivo"
           style={{
             position: 'absolute',
             top: '50%',
@@ -62,7 +62,7 @@ function Logo() {
             color: colors.white,
           }}
         >
-          PREVEN<span style={{ color: colors.lime }}>CORE</span>
+          NEXO<span style={{ color: colors.lime }}>PREVENTIVO</span>
         </span>
         <span
           style={{
