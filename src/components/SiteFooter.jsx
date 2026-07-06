@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { colors, fonts, layout } from '../theme'
 import { WHATSAPP_URL } from './ui'
 
-const shield = '/assets/shield.png'
+const shield = '/assets/logo.png'
 
 const NAV = [
   { label: 'Inicio', to: '/' },
@@ -78,9 +78,9 @@ export default function SiteFooter() {
                     position: 'absolute',
                     top: '50%',
                     left: '50%',
-                    height: 56,
+                    height: 54,
                     width: 'auto',
-                    transform: 'translate(-50%,-54%)',
+                    transform: 'translate(-50%,-52%)',
                     filter: 'drop-shadow(0 5px 9px rgba(0,0,0,0.45))',
                   }}
                 />

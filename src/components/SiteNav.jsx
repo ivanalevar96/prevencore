@@ -5,7 +5,7 @@ import { colors, fonts, layout } from '../theme'
 import { useIsMobile } from '../hooks/useMediaQuery'
 import { PulseDot, WHATSAPP_URL } from './ui'
 
-const shield = '/assets/shield.png'
+const shield = '/assets/logo.png'
 
 const NAV_ITEMS = [
   { label: 'Inicio', to: '/' },
@@ -45,9 +45,9 @@ function Logo() {
             position: 'absolute',
             top: '50%',
             left: '50%',
-            height: 60,
+            height: 58,
             width: 'auto',
-            transform: 'translate(-50%,-54%)',
+            transform: 'translate(-50%,-52%)',
             filter: 'drop-shadow(0 6px 10px rgba(0,0,0,0.45))',
           }}
         />
