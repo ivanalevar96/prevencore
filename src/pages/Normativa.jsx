@@ -1,5 +1,5 @@
 import { colors, fonts } from '../theme'
-import { Container, Button, WHATSAPP_URL } from '../components/ui'
+import { Container } from '../components/ui'
 import { Reveal } from '../components/motion'
 import SubHero from '../components/SubHero'
 
@@ -99,41 +99,6 @@ export default function Normativa() {
               preparada ante auditorías y fiscalizaciones.
             </p>
           </div>
-        </Container>
-      </section>
-
-      {/* CTA */}
-      <section style={{ background: colors.lime }}>
-        <Container
-          style={{
-            padding: 'clamp(48px,7vw,64px) 0',
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: 28,
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}
-        >
-          <div style={{ maxWidth: 640 }}>
-            <h2
-              style={{
-                margin: 0,
-                fontFamily: fonts.heading,
-                fontWeight: 800,
-                fontSize: 'clamp(26px,3.4vw,38px)',
-                lineHeight: 1.12,
-                letterSpacing: '-0.01em',
-                color: colors.navy,
-              }}
-            >
-              Prepara tu empresa para una fiscalización
-            </h2>
-            <p style={{ margin: '16px 0 0', fontSize: 16.5, lineHeight: 1.6, color: '#1E3A1B' }}>
-              Revisamos tu nivel de cumplimiento actual y ordenamos la documentación que te exige la
-              normativa.
-            </p>
-          </div>
-          <Button to="/contacto" variant="navy" style={{ height: 54, flexShrink: 0 }}>Solicitar revisión</Button>
         </Container>
       </section>
     </>

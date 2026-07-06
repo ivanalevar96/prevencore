@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { colors, fonts } from '../theme'
-import { Container, Button } from '../components/ui'
+import { Container } from '../components/ui'
 import { LiftCard } from '../components/motion'
 import SubHero from '../components/SubHero'
 
@@ -80,35 +80,6 @@ export default function Rubros() {
               </Link>
             </div>
           </div>
-        </Container>
-      </section>
-
-      {/* CTA */}
-      <section style={{ background: colors.navyDark }}>
-        <Container
-          style={{
-            padding: 'clamp(44px,7vw,60px) 0',
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: 24,
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}
-        >
-          <h2
-            style={{
-              margin: 0,
-              fontFamily: fonts.heading,
-              fontWeight: 800,
-              fontSize: 'clamp(24px,3vw,32px)',
-              lineHeight: 1.15,
-              color: colors.white,
-              maxWidth: 620,
-            }}
-          >
-            Agenda una visita técnica para tu empresa
-          </h2>
-          <Button to="/contacto" variant="lime" style={{ height: 54 }}>Solicitar asesoría</Button>
         </Container>
       </section>
     </>

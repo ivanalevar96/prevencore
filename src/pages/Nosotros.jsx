@@ -4,7 +4,7 @@ import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/navigation'
 import { colors, fonts } from '../theme'
-import { Container, Eyebrow, Button } from '../components/ui'
+import { Container, Eyebrow } from '../components/ui'
 import { Reveal, Zoom } from '../components/motion'
 import SubHero from '../components/SubHero'
 
@@ -168,35 +168,6 @@ export default function Nosotros() {
               </SwiperSlide>
             ))}
           </Swiper>
-        </Container>
-      </section>
-
-      {/* CTA */}
-      <section style={{ background: colors.navyDark }}>
-        <Container
-          style={{
-            padding: 'clamp(44px,7vw,60px) 0',
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: 24,
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}
-        >
-          <h2
-            style={{
-              margin: 0,
-              fontFamily: fonts.heading,
-              fontWeight: 800,
-              fontSize: 'clamp(24px,3vw,32px)',
-              lineHeight: 1.15,
-              color: colors.white,
-              maxWidth: 620,
-            }}
-          >
-            ¿Quieres ordenar la gestión preventiva de tu empresa?
-          </h2>
-          <Button to="/contacto" variant="lime" style={{ height: 54 }}>Solicitar asesoría</Button>
         </Container>
       </section>
     </>
