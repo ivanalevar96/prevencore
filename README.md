@@ -73,8 +73,14 @@ funcione tras un refresh.
 ## Formulario de contacto
 
 El formulario (`/contacto`) envía un `POST` a la función serverless `api/contact.js`
-(Vercel), que reenvía el mensaje por correo vía SMTP (Nodemailer) a
-`contacto@nexopreventivo.cl`.
+(Vercel), que envía por SMTP (Nodemailer) dos correos con plantilla HTML de marca
+(encabezado navy + logo):
+
+1. **Notificación interna** a `contacto@nexopreventivo.cl` con los datos del cliente
+   y `Reply-To` apuntando a su correo (para responder su consulta directamente desde
+   ese mismo correo).
+2. **Confirmación automática al cliente** (solo si dejó correo) avisando que se
+   recibió su solicitud y que se le responderá en 24 horas o 1 día hábil.
 
 Variables de entorno requeridas en Vercel:
 
@@ -86,6 +92,9 @@ Variables de entorno requeridas en Vercel:
   `SMTP_USER`/`CONTACT_TO` (ej. cuando `contacto@nexopreventivo.cl` es un alias de
   "Enviar correo como" configurado en la cuenta de `SMTP_USER`)
 - `CONTACT_TO` (opcional, por defecto `contacto@nexopreventivo.cl`)
+- `SITE_URL` (opcional, por defecto `https://nexopreventivo.cl`) — dominio público
+  usado para cargar el logo en los correos (los clientes de correo no pueden
+  resolver rutas relativas del proyecto)
 
 Mientras `SMTP_USER`/`SMTP_PASS` no estén configuradas, el endpoint responde con un
 error controlado (503) y el frontend muestra un mensaje claro sin romper el build ni
